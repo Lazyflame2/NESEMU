@@ -74,3 +74,13 @@ void olc2C02::ppuWrite(uint16_t addr, uint8_t data)
 {
 	addr &= 0x3FFF; // Masking the address incase PPU tries to write to its bus in a location outside of its range
 }
+
+void olc2C02::ConnectCartridge(const std::shared_ptr<Cartridge>& cart)
+{
+	this->cart = cartridge;
+}
+
+void olc2C02::clock()
+{
+
+}
